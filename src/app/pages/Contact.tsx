@@ -63,7 +63,7 @@ export default function Contact() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h1 className="text-5xl md:text-6xl mb-6">Contact Us</h1>
+          <h1 className="text-5xl md:text-6xl mb-6 font-bold">Contact Us</h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
             Get in touch with our solar energy experts
           </p>
@@ -77,7 +77,7 @@ export default function Contact() {
             {contactInfo.map((info, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-all">
                 <div className="flex justify-center mb-4">{info.icon}</div>
-                <h3 className="text-lg mb-3 text-gray-900">{info.title}</h3>
+                <h3 className="text-lg font-semibold mb-3 text-gray-900">{info.title}</h3>
                 {info.details.map((detail, idx) => (
                   <p key={idx} className="text-gray-600">
                     {detail}
@@ -95,7 +95,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-4xl mb-6 text-gray-900">Send Us a Message</h2>
+              <h2 className="text-4xl font-bold mb-6 text-gray-900">Send Us a Message</h2>
               <p className="text-lg text-gray-600 mb-8">
                 Fill out the form below and our team will get back to you within 24 hours.
               </p>
@@ -103,7 +103,7 @@ export default function Contact() {
               {submitted ? (
                 <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
                   <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
-                  <h3 className="text-2xl text-green-800 mb-2">Thank You!</h3>
+                  <h3 className="text-2xl font-bold text-green-800 mb-2">Thank You!</h3>
                   <p className="text-green-700">
                     Your message has been sent successfully. We'll contact you soon.
                   </p>
@@ -111,7 +111,7 @@ export default function Contact() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-gray-700 mb-2">
+                    <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
                       Full Name *
                     </label>
                     <input
@@ -127,7 +127,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-gray-700 mb-2">
+                    <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
                       Phone Number *
                     </label>
                     <input
@@ -143,7 +143,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-gray-700 mb-2">
+                    <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
                       Email Address *
                     </label>
                     <input
@@ -159,7 +159,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-gray-700 mb-2">
+                    <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
                       Message *
                     </label>
                     <textarea
@@ -176,7 +176,7 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-all flex items-center justify-center gap-2"
+                    className="w-full bg-green-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-green-700 transition-all flex items-center justify-center gap-2"
                   >
                     Send Message
                     <Send size={20} />
@@ -186,19 +186,19 @@ export default function Contact() {
 
               {/* WhatsApp CTA */}
               <div className="mt-8 p-6 bg-green-50 border border-green-200 rounded-lg">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                <div className="flex flex-col sm:flex-row items-center gap-4">
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <MessageCircle className="text-white" size={24} />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg text-gray-900 mb-1">Prefer WhatsApp?</h3>
+                  <div className="flex-1 text-center sm:text-left">
+                    <h3 className="text-lg font-bold text-gray-900 mb-1">Prefer WhatsApp?</h3>
                     <p className="text-gray-600 text-sm">Get instant responses on WhatsApp</p>
                   </div>
                   <a
                     href="https://wa.me/919640484677?text=Hi,%20I'm%20interested%20in%20solar%20solutions%20from%20Elrix%20Energy."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-all"
+                    className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-all w-full sm:w-auto text-center"
                   >
                     Chat Now
                   </a>
@@ -208,14 +208,14 @@ export default function Contact() {
 
             {/* Google Map */}
             <div>
-              <h2 className="text-4xl mb-6 text-gray-900">Visit Our Office</h2>
+              <h2 className="text-4xl font-bold mb-6 text-gray-900">Visit Our Office</h2>
               <p className="text-lg text-gray-600 mb-8">
                 GNT Main Road, Vedayapalem, Nellore, 524004
               </p>
 
-              <div className="rounded-xl overflow-hidden shadow-2xl h-[600px] bg-gray-100">
+              <div className="rounded-xl overflow-hidden shadow-2xl h-[600px] bg-gray-100 border border-gray-200">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.5!2d79.9721336!3d14.4291198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4cf3006e3dcd49%3A0x105ce8398e71da03!2sGreen%20Energy%20Solar%20Systems%20PVT.%20LTD!5e0!3m2!1sen!2sin!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.518693740266!2d79.95336017478335!3d14.41179488605553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4cf3c387ecf029%3A0xdd87578d270129e8!2sELRIX%20ENERGY%20SOLAR%20SOLUTIONS!5e0!3m2!1sen!2sin!4v1714150000000!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -226,19 +226,19 @@ export default function Contact() {
                 ></iframe>
               </div>
 
-              <div className="mt-6 grid grid-cols-2 gap-4">
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <a
                   href="tel:+919640484677"
-                  className="bg-blue-600 text-white px-6 py-4 rounded-lg hover:bg-blue-700 transition-all text-center"
+                  className="bg-blue-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all text-center flex items-center justify-center gap-2"
                 >
-                  <Phone className="inline mr-2" size={20} />
+                  <Phone size={20} />
                   Call Now
                 </a>
                 <a
                   href="mailto:elrixenergy@gmail.com"
-                  className="bg-red-600 text-white px-6 py-4 rounded-lg hover:bg-red-700 transition-all text-center"
+                  className="bg-red-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-red-700 transition-all text-center flex items-center justify-center gap-2"
                 >
-                  <Mail className="inline mr-2" size={20} />
+                  <Mail size={20} />
                   Email Us
                 </a>
               </div>
@@ -251,7 +251,7 @@ export default function Contact() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4 text-gray-900">Frequently Asked Questions</h2>
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">Frequently Asked Questions</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Quick answers to common questions about solar energy
             </p>
@@ -276,9 +276,9 @@ export default function Contact() {
                 a: "We offer 25+ year performance warranty on panels, 10 years on inverters, and 5 years on installation workmanship.",
               },
             ].map((faq, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl text-gray-900 mb-3">{faq.q}</h3>
-                <p className="text-gray-600">{faq.a}</p>
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all border border-gray-100">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{faq.q}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>
