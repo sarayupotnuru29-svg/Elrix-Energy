@@ -1,8 +1,8 @@
 import { Outlet, Link, useLocation } from "react-router";
-import { Menu, X, Sun, Leaf, Phone, Mail, MapPin, Facebook, Instagram, Linkedin, ChevronUp } from "lucide-react";
+import { Menu, X, Sun, Leaf, Phone, Mail, MapPin, Facebook, Instagram, Linkedin, ChevronUp, Heart } from "lucide-react";
 import { useState, useEffect } from "react";
 import WhatsAppButton from "./WhatsAppButton";
-import logo from "figma:asset/b157882c48e21f4a34bf44d22c03d4cba58e6971.png";
+import logo from "../../assets/logo.png";
 
 export default function Layout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -124,7 +124,7 @@ export default function Layout() {
             {/* Company Info */}
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <img src={logo} alt="ELRIX ENERGY" className="h-12 w-auto brightness-0 invert" />
+                <img src={logo} alt="ELRIX ENERGY" className="h-12 w-auto" />
                 <div className="flex flex-col">
                   <span className="font-bold text-xl">ELRIX ENERGY</span>
                   <span className="text-sm text-green-400">Powering Clean Energy</span>
@@ -188,7 +188,25 @@ export default function Layout() {
             <p className="mb-2">
               <strong>Business Hours:</strong> Mon-Sat: 11 AM - 9 PM | Sunday: 11 AM - 2 PM
             </p>
-            <p>&copy; 2026 ELRIX ENERGY. All rights reserved. | www.elrixenergy.com</p>
+            <p>&copy; 2026 ELRIX ENERGY. All rights reserved.</p>
+
+            {/* StaffArc Attribution */}
+            <div className="flex justify-center items-center gap-1 mt-4">
+              Made with <Heart className="inline h-4 w-4 text-red-500 mx-1" fill="currentColor" /> by
+              <a
+                href="https://staffarc.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-orange-600 hover:underline"
+              >
+                <img
+                  src="https://www.staffarc.in/images/Staffarc-logo.png"
+                  alt="StaffArc logo"
+                  className="h-5 w-5 object-contain"
+                />
+                StaffArc
+              </a>
+            </div>
           </div>
         </div>
       </footer>
